@@ -57,8 +57,34 @@
     <img id="lightbox-img" src="" alt="">
   </div>
 
+  <script>
+    const imagens = document.querySelectorAll('.galeria-grid img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const fechar = document.getElementById('fechar');
+
+    imagens.forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+      });
+    });
+
+    fechar.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+
+    // Fecha o lightbox ao clicar fora da imagem
+    lightbox.addEventListener('click', (e) => {
+      if (e.target !== lightboxImg) {
+        lightbox.style.display = 'none';
+      }
+    });
+  </script>
+  
 </body>
 </html>
+
 
 
 
