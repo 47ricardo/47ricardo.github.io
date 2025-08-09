@@ -66,6 +66,13 @@ main {
   margin: auto;
 }
 
+.logo {
+  width: 100%;
+  max-width: 350px; /* tamanho máximo */
+  height: 200px;    /* altura fixa */
+  display: block;
+}
+
 section {
   margin-bottom: 60px;
 }
@@ -148,3 +155,4 @@ footer {
   color: white;
   cursor: pointer;
 }
+
