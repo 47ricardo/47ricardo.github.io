@@ -67,10 +67,9 @@ main {
 }
 
 .logo {
-  width: 100%;
-  max-width: 350px; /* tamanho máximo */
-  height: 200px;    /* altura fixa */
-  display: block;
+  width: 10px;
+  height: 10px;
+  display: center;
 }
 
 section {
@@ -155,4 +154,5 @@ footer {
   color: white;
   cursor: pointer;
 }
+
 
