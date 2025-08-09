@@ -66,10 +66,11 @@ main {
   margin: auto;
 }
 
-.logo {
-  width: 10px;
-  height: 10px;
-  display: center;
+#logo {
+  width: 150px; /* ajusta o tamanho horizontal */
+  height: auto; /* mantém a proporção */
+  display: block;
+  margin: 10px auto; /* centraliza horizontalmente */
 }
 
 section {
@@ -154,5 +155,6 @@ footer {
   color: white;
   cursor: pointer;
 }
+
 
 
