@@ -42,6 +42,67 @@
       <p date-key="about_p8">Estou totalmente disponível para integrar uma comunidade de SimRacing ou até uma equipa — por mais pequena ou recente que seja. Estou pronto para evoluir e competir.</p>
     </section>
 
+        <!-- Secção do Gráfico -->
+    <section id="horas-semanais">
+      <h2>Horas de Jogo por Semana</h2>
+      <canvas id="graficoHoras"></canvas>
+    </section>
+
+<!-- Chart.js via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      const ctx = document.getElementById('graficoHoras').getContext('2d');
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['11-17 Agosto', '18-24 Agosto'],
+          datasets: [{
+            label: 'Horas de Jogo',
+            data: [12, 15], // altera estes valores conforme as tuas semanas
+            backgroundColor: 'rgba(0, 60, 255, 0.7)',
+            borderColor: 'rgba(0, 60, 255, 1)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          animation: {
+            duration: 1500,
+            easing: 'easeOutBounce'
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Horas'
+              }
+            },
+            x: {
+              title: {
+                display: true,
+                text: 'Semanas'
+              }
+            }
+          }  
+        }
+      });
+    </script>
+
+    <style>
+      #horas-semanais {
+        margin: 60px auto;
+        max-width: 800px;
+        text-align: center;
+      }
+
+      #horas-semanais h2 {
+        color: #003cff;
+        margin-bottom: 20px;
+      }
+    </style>
+
     <section id="galeria">
       <h2 data-key="gallery_title">Galeria</h2>
       <div class="galeria-grid">
@@ -157,6 +218,7 @@
   </script>
 </body>
 </html>
+
 
 
 
