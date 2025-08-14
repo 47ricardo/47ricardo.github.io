@@ -43,9 +43,9 @@
     </section>
 
         <!-- Secção do Gráfico -->
-    <section id="horas-semanais">
-      <h2>Horas de Jogo por Semana</h2>
-      <canvas id="graficoHoras"></canvas>
+    <section id="rating">
+      <h2>Rating</h2>
+      <canvas id="graficoRating"></canvas>
     </section>
 
     <section id="horas-totais">
@@ -56,14 +56,14 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <script>
-      const ctx = document.getElementById('graficoHoras').getContext('2d');
+      const ctx = document.getElementById('graficoRating').getContext('2d');
       new Chart(ctx, {
         type: 'bar',
         data: {
-          labels: ['11-17 Agosto', '18-24 Agosto', '25-31 Agosto', '1-7 Setembro', '8-14 Setembro'],
+          labels: ['TR', 'CN', 'CC', 'PC', 'SA', 'RC', 'CP'],
           datasets: [{
-            label: 'Horas de Jogo',
-            data: [12, 17, 0, 0, 0], // altera estes valores conforme as tuas semanas
+            label: 'Pontuação',
+            data: [80, 82, 87, 0, 53, 49, 0], // altera estes valores 
             backgroundColor: 'rgba(0, 60, 255, 0.7)',
             borderColor: 'rgba(0, 60, 255, 1)',
             borderWidth: 1
@@ -80,13 +80,13 @@
               beginAtZero: true,
               title: {
                 display: true,
-                text: 'Horas'
+                text: 'Pontuação'
               }
             },
             x: {
               title: {
                 display: true,
-                text: 'Semanas'
+                text: 'Disciplinas'
               }
             }
           }  
@@ -95,13 +95,13 @@
     </script>
 
     <style>
-      #horas-semanais {
+      #rating {
         margin: 60px auto;
         max-width: 800px;
         text-align: center;
       }
 
-      #horas-semanais h2 {
+      #rating h2 {
         color: #003cff;
         margin-bottom: 20px;
       }
@@ -222,6 +222,7 @@
   </script>
 </body>
 </html>
+
 
 
 
